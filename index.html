@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fighter Jet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body class="background">
+    
+<div class="container">
+    <div class="path"></div>    
+        <div class="Plane">
+            <ul class="list-unstyled py-5">
+            <li><img src="images/plane_1.png" alt="pic1" width="200" onclick="big('images/plane_1.png');path('lightgray');bg('purple');changeText('F/A-18 Hornet','yellow');modeText('black')"></li>
+            <li><img src="images/plane_2.png" alt="pic2" width="200" onclick="big('images/plane_2.png');path('lightgreen');bg('indigo');changeText('F-16 Fighting Falcon','white');modeText('red')"></li>
+            <li><img src="images/plane_3.png" alt="pic3" width="200" onclick="big('images/plane_3.png');path('lightblue');bg('yellow');changeText('Combat Fighter','red');modeText('blue')"></li>
+            </ul>
+        <div class="big-img px-3">
+            <img class="big" src="images/Main_plane.png" width="500" alt="main_pic">
+        </div>
+        <div class="content">
+            <h1>Fighter Jet</h1><br><br>
+            <h5 id="displayText">Let's Fly</h5>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

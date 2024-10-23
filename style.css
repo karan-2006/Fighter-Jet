@@ -1,0 +1,42 @@
+.Plane {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.big-img {
+    margin-top: 150px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content {
+    text-align: center;
+    margin-top: 200px;
+    color: green;
+}
+
+li{
+    padding: 40px 0px;
+}
+
+li img:hover {
+
+        transform: translateX(30px);
+        transition: transform 0.3s ease-in;
+}
+
+.path{
+    width: 650px;
+    height: 650px;
+    border-radius: 0% 50% 50% 0%;
+    background-color: red;
+    position: absolute;
+    z-index: -1;
+    
+}
+
+
+.background{
+    background-color:darkblue;
+}
