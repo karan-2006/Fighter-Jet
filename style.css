@@ -44,7 +44,7 @@ li img:hover {
 @media screen and (max-width: 320px) {
 
     .path{
-        width: 100px;
+        width: 50px;
     }
     
 }
