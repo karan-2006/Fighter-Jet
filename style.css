@@ -40,3 +40,14 @@ li img:hover {
 .background{
     background-color:darkblue;
 }
+
+@media screen and (max-width:320px){
+    .Plane{
+        width: 50px;
+    }
+
+    .big-img{
+        width: 100px;
+    }
+
+}
