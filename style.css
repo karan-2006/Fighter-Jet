@@ -44,8 +44,34 @@ li img:hover {
 @media screen and (max-width: 320px) {
 
     .path{
+        width: 130px;
+        height: 500px;
+    }
+
+    li{
+        padding: 60px 0px;
+    }
+
+    .Plane li img{
         width: 50px;
-        height: 50px;
+    }
+
+    div img{
+        width: 100px;
+
+    }
+
+    .big-img{
+        padding-top: 100px;
+    }
+
+    .content h1{
+        font-size: larger;
+    }
+
+    .content h5{
+        margin-top: 10px;
+        font-size: small;
     }
     
 }
