@@ -1,77 +1,153 @@
-.Plane {
+/* Constrain content wrapper */
+.content-wrapper {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Center content vertically and horizontally */
+  .container-fluid {
+    min-height: 100vh;       /* Full viewport height */
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-.big-img {
-    margin-top: 150px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.content {
-    text-align: center;
-    margin-top: 200px;
-    color: green;
-}
-
-li{
-    padding: 40px 0px;
-}
-
-li img:hover {
-
-        transform: translateX(30px);
-        transition: transform 0.3s ease-in;
-}
-
-.path{
-    width: 650px;
-    height: 650px;
-    border-radius: 0% 50% 50% 0%;
-    background-color: red;
+    align-items: center;     /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+  }
+  
+  /* General Body Background */
+  .background {
+    background-color: darkblue;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Background Shape: full viewport using viewport units */
+  .path {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: red;
+    border-radius: 0 50% 50% 0;
     z-index: -1;
-    
-}
-
-
-.background{
-    background-color:darkblue;
-}
-
-@media screen and (max-width: 320px) {
-
-    .path{
-        width: 130px;
-        height: 500px;
+    transition: background 0.5s ease;
+  }
+  
+  /* Image Thumbnail Styling (Base: lg and up) */
+  .plane-thumb {
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .plane-thumb:hover {
+    transform: translateX(10px);
+  }
+  
+  .img-thumbnail {
+    background-color: transparent;
+    border: none;
+  }
+  
+  /* Main Image Styling (Base: lg and up) */
+  .big {
+    width: 100%;       /* Responsive width */
+    max-width: 800px;  /* Maximum width for larger screens */
+    height: auto;
+  }
+  
+  /* Content Text Styling (Base: lg and up) */
+  .content {
+    color: green;
+    padding: 1rem;
+  }
+  .content h1 {
+    font-size: 2rem;
+    transition: color 0.5s ease;
+  }
+  .content h5 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    transition: color 0.5s ease;
+  }
+  
+  /* Extra Small (xs): <576px */
+  @media (max-width: 575.98px) {
+    .plane-thumb {
+      width: 80px;
     }
-
-    li{
-        padding: 60px 0px;
+    .big {
+      max-width: 100%;
     }
-
-    .Plane li img{
-        width: 50px;
+    .content h1 {
+      font-size: 1.5rem;
     }
-
-    div img{
-        width: 100px;
-
+    .content h5 {
+      font-size: 1rem;
     }
-
-    .big-img{
-        padding-top: 100px;
+  }
+  
+  /* Small (sm): 576px to 767.98px */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .plane-thumb {
+      width: 100px;
     }
-
-    .content h1{
-        font-size: larger;
+    .big {
+      max-width: 90%;
     }
-
-    .content h5{
-        margin-top: 10px;
-        font-size: small;
+    .content h1 {
+      font-size: 1.75rem;
     }
-    
-}
+    .content h5 {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Medium (md): 768px to 991.98px */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .plane-thumb {
+      width: 110px;
+    }
+    .big {
+      max-width: 550px;
+    }
+    .content h1 {
+      font-size: 1.9rem;
+    }
+    .content h5 {
+      font-size: 1.15rem;
+    }
+  }
+  
+  /* Large (lg): 992px to 1199.98px */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .plane-thumb {
+      width: 120px;
+    }
+    .big {
+      max-width: 600px;
+    }
+    .content h1 {
+      font-size: 2rem;
+    }
+    .content h5 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Landscape orientation adjustments for xs to sm devices */
+  @media (max-width: 767.98px) and (orientation: landscape) {
+    .plane-thumb {
+      width: 90px;  /* Slightly smaller in landscape */
+    }
+    .big {
+      max-width: 85%;
+    }
+    .content h1 {
+      font-size: 1.6rem;
+    }
+    .content h5 {
+      font-size: 1rem;
+    }
+  }
+  
